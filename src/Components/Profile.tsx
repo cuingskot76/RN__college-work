@@ -26,59 +26,64 @@ const Profile = () => {
       </View>
       {/* __end-images */}
 
-      {/* description */}
-      <Text style={styles.description}>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
-        officia, commodi amet fugit recusandae soluta nisi fugiat dignissimos,
-        autem, vero cupiditate possimus sunt ut itaque.
-      </Text>
-      {/* en__description */}
+      <View style={styles.descContainer}>
+        {/* description */}
+        <Text style={styles.description}>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus
+          officia, commodi amet fugit recusandae soluta nisi fugiat dignissimos,
+          autem, vero cupiditate possimus sunt ut itaque.
+        </Text>
+        {/* en__description */}
 
-      {/* input */}
-      <TextInput placeholder="Enter your name" style={styles.input} />
-      {/* __end-input */}
+        {/* input */}
+        <TextInput placeholder="Enter your name" style={styles.input} />
+        {/* __end-input */}
 
-      {/* profile-user */}
-      <View style={styles.userImage}>
-        <Image
-          source={{
-            uri: 'https://images.unsplash.com/photo-1640682567682-472e5e9eb889?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1953&q=80',
-          }}
-          style={{
-            width: 150,
-            height: 150,
-            borderRadius: 100,
-          }}
-        />
-      </View>
-      {/* __end-profile-user */}
-
-      {/* actions */}
-      <View style={styles.actions}>
-        <View style={{width: '40%'}}>
-          <Button title="Keluar" color="red" />
+        {/* profile-user */}
+        <View style={styles.userImage}>
+          <Image
+            source={{
+              uri: 'https://images.unsplash.com/photo-1640682567682-472e5e9eb889?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1953&q=80',
+            }}
+            style={{
+              width: 150,
+              height: 150,
+              borderRadius: 100,
+            }}
+          />
         </View>
-        <View style={{width: '40%'}}>
-          <Button title="Simpan" color="green" />
+        {/* __end-profile-user */}
+
+        {/* actions */}
+        <View style={styles.actions}>
+          <View style={{width: '40%'}}>
+            <Button title="Keluar" color="#C84361" />
+          </View>
+          <View style={{width: '40%'}}>
+            <Button title="Simpan" color="#57C5B6" />
+          </View>
         </View>
+        {/* __end-actions */}
       </View>
-      {/* __end-actions */}
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    // backgroundColor: 'salmon',
     height: '100%',
     paddingHorizontal: 20,
+  },
+
+  descContainer: {
+    backgroundColor: 'salmon',
   },
 
   images: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
-    // backgroundColor: 'blue',
+    marginBottom: 20,
   },
 
   image: {
@@ -95,7 +100,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderRadius: 10,
     padding: 10,
-    marginTop: 20,
+    marginVertical: 20,
   },
 
   userImage: {
